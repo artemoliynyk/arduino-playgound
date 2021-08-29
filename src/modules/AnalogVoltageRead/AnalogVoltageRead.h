@@ -8,10 +8,12 @@
 
 #include <Base.h>
 
-const int PINS_USED = 5;
 
 namespace AnalogVoltageRead {
-    int pinList[PINS_USED] = {PIN8, PIN9, PIN10, PIN11, PIN12};
+    const int PINS_USED = 8;
+    int pinList[PINS_USED] = {PIN5, PIN6, PIN7, PIN8, PIN9, PIN10, PIN11, PIN12};
+//    int pinList[PINS_USED] = {PIN12,PIN11,PIN10,PIN9,PIN8,PIN7,PIN6,PIN5};
+//    int pinList[PINS_USED] = {PIN5, PIN7, PIN6, PIN9, PIN8, PIN12, PIN11, PIN10};
 
     void module_setup() {
         // init serial
@@ -26,7 +28,8 @@ namespace AnalogVoltageRead {
         int sensorValue = analogRead(A0);
 
         // Convert the analog reading (which goes from 0 - 1023) to a voltage (0 - 5V):
-        int voltage = sensorValue * (5.0 / 1023.0);
+//        int voltage = sensorValue * (5.0 / 1023.0);
+        int voltage = sensorValue * (PINS_USED / 1023.0);
 
         Base::setLevelForPins(LOW, pinList, PINS_USED);
         Base::setLevelForPins(HIGH, pinList, voltage);
@@ -36,6 +39,7 @@ namespace AnalogVoltageRead {
         Serial.print(" / ");
         Serial.print(sensorValue);
         Serial.println("\n");
+
     }
 };
 
