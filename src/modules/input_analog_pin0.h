@@ -1,7 +1,7 @@
 #define _INC_INPUT_PIN10
 
 #include <Arduino.h>
-#include "../ports_uno_ali.h"
+#include <ports_uno_ali.h>
 
 namespace input_analog_pin0
 {

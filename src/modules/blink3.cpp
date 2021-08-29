@@ -1,7 +1,7 @@
 #define _INC_BLINK3
 
 #include <Arduino.h>
-#include "../ports_uno_ali.h"
+#include <ports_uno_ali.h>
 
 namespace blink3
 {

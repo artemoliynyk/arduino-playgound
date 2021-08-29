@@ -1,7 +1,7 @@
 #define _INC_INPUT_PIN10
 
 #include <Arduino.h>
-#include "../ports_uno_ali.h"
+#include <ports_uno_ali.h>
 #include "input_analog_pin0.h"
 
 namespace input_analog_pin0
@@ -46,7 +46,6 @@ namespace input_analog_pin0
 
     void setLevelForLED(int pin, int level)
     {
-        // pin = (leds);
         level = (HIGH || LOW ? level : HIGH);
 
         digitalWrite(pin, level);
