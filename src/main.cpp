@@ -1,19 +1,17 @@
-//#include <Arduino.h>
-
 //#include "../lib/modules/blink3.cpp"
 //#include "../lib/modules/input_digital_pin02.cpp"
 //#include "../lib/modules/input_analog_pin0.cpp"
-#include <modules/AnalogVoltageRead/AnalogVoltageRead.h>
+// #include <modules/AnalogVoltageRead/AnalogVoltageRead.h>
 
-//#define WORKSPACE Fade
-#define WORKSPACE AnalogVoltageRead
+#include "modules/rgb/rgb.h"
+#include <Arduino.h>
 
-void setup()
-{
-    WORKSPACE::module_setup();
+RgbModule module;
+
+void setup() {
+    module.moduleSetup();
 }
 
-void loop()
-{
-    WORKSPACE::module_loop();
+void loop() {
+    module.moduleLoop();
 }

@@ -3,8 +3,8 @@
  * Example implementation: https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
 */
 
-#ifndef UNO_01_FADE_H
-#define UNO_01_FADE_H
+#ifndef UNO_FADE_H
+#define UNO_FADE_H
 
 #include <Base.h>
 
@@ -56,4 +56,4 @@ namespace Fade {
     }
 };
 
-#endif //UNO_01_FADE_H
+#endif //UNO_FADE_H
